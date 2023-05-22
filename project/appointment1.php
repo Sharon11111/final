@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo '<script>alert("Appointment created successfully.");</script>';
         // 等待一秒后重定向到其他页面
         echo '<script>
-                window.location.href = "http://localhost/final/HW2/search.php";
+               window.location.href = ../project/search.php";
         </script>';
     } else {
         echo "Error creating appointment: " . mysqli_error($conn);
