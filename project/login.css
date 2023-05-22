@@ -2,13 +2,16 @@
 body{
     background:linear-gradient(to top, rgba(46, 3, 43, 0.811), 
     rgba(225, 205, 224, 0.84));
+    min-width:500px;   
+    max-width: 1000px;
 }
 
 
 h2{
-    width:auto;
-    margin: 500px ;
-    padding:30px;
+    min-width:500px;
+    max-width: 1000px;
+    margin: 500px;
+    padding:30px 38px;
     border: 5px solid rgba(23, 23, 22, 0.204);
     text-align: center;
     background-color: rgba(170, 114, 169, 0.481);
@@ -25,16 +28,18 @@ h2{
     text-align: center;
     padding: 30px 38px 66px;
     margin: 500px;
+    min-width:500px;   
+    max-width: 1000px;
     margin-top: 0px;
-    width: auto;
     height: 200px;
     background-image: linear-gradient(to bottom, rgba(207, 191, 207, 0.71), 
     rgba(225, 205, 224, 0.84)),url("https://img.51miz.com/Element/00/81/16/73/6be3a32f_E811673_559bed6c.jpg") ;
     border: 5px solid rgba(48, 10, 43, 0.341);
     text-align: center;
-    background-size:505px 500px;
+    background-size:auto;
     background-repeat : no-repeat;
     font-style: italic;
+    width:auto;
 }
 
 input[type="text"] {
