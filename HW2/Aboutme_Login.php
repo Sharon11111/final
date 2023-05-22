@@ -13,6 +13,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 <nav id="six">
         <ul>
+            <li><a href="appointment.php">Make an appointment</a></li>
+            <li><a href="search.php">Search</a></li>
+            &ensp;
             <li><a href="login_system\login\change_password.php">Change</a></li>
             <li><a href="login_system\login\logout.php">Logout</a></li>
         </ul>
