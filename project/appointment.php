@@ -67,16 +67,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <option value="Evening">Evening</option>
             </select><br>
 <br>
-        <label for="doctor_name">Doctor:</label>
+      <label for="doctor_name">Doctor:</label>
         <select name="doctor_name" required>
             <option value="">Select Doctor</option>
             <option value="Tim">Tim</option>
             <option value="Ellen">Ellen</option>
             <option value="John">John</option>
         </select><br>
+        <div class="de"><input type="submit" value="提交" >
+</div>
         </form>
  <br>
-  <div class="de"><input type="submit" value="提交" >
-</div>        </div>
+         </div>
 </body>
 </html>
+
+
+       
