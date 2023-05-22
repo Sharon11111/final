@@ -31,49 +31,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Appointment</title>
+    <title>預約</title>
     <link rel="stylesheet" href="appointment.css">
 </head>
 <body>
 <a href="Aboutme_login.php" class="de" >回主頁</a>
    <a href="login_system\login\logout.php" class="de">登出</a>
-    <h2>Appointment</h2>
+    <h2>預約</h2>
 <div class=three>
     <!-- 预约表单 -->
     <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
-        <label for="first_name">First Name:</label>
+        <label for="first_name">名字    :</label>
         <input type="text" name="first_name" required><br>
 <br>
-        <label for="last_name">Last Name:</label>
+        <label for="last_name">姓氏  :</label>
         <input type="text" name="last_name" required><br>
 <br>
-        <label for="date_of_birth">Date of Birth:</label>
+        <label for="date_of_birth">生日  :</label>
         <input type="date" name="date_of_birth" required><br>
 <br>
-        <label for="identification_number">Identification Number:</label>
+        <label for="identification_number">身分證  :</label>
         <input type="text" name="identification_number" required><br>
 <br>
-        <label for="phone_number">Phone Number:</label>
+        <label for="phone_number">手機號碼  :</label>
         <input type="text" name="phone_number" required><br>
 <br>
-        <label for="appointment_date">Appointment Date:</label>
+        <label for="appointment_date">預約日期  :</label>
         <input type="date" name="appointment_date" required><br>
 <br>
-        <label for="appointment_time">Appointment Time:</label>
+        <label for="appointment_time">預約時段  :</label>
             <select name="appointment_time" required>
-            <option value="">Select Time</option>
-            <option value="Morning">Morning</option>
-            <option value="Afternoon">Afternoon</option>
-            <option value="Evening">Evening</option>
+            <option value="">選擇時段</option>
+            <option value="Morning">早上</option>
+            <option value="Afternoon">下午</option>
+            <option value="Evening">傍晚</option>
             </select><br>
 <br>
-      <label for="doctor_name">Doctor:</label>
+        <label for="doctor_name">醫生  :</label>
         <select name="doctor_name" required>
-            <option value="">Select Doctor</option>
+            <option value="">選擇醫生</option>
             <option value="Tim">Tim</option>
             <option value="Ellen">Ellen</option>
             <option value="John">John</option>
         </select><br>
+        <br>
         <div class="de"><input type="submit" value="提交" >
 </div>
         </form>
