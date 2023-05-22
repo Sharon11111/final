@@ -16,14 +16,8 @@
             <p class="error"><?php echo $_GET['error']; ?></p>    
         <?php } ?>
 <div class=three> 
-        <label>名字</label>
-        <br>
-        <input type="text" name="uname" placeholder="User Name">
-        <br>
-        <label>姓氏</label>
-        <br>
-        <input type="text" name="uname" placeholder="User Name">
-        <br>
+        
+       
         <label>身分證</label>
         <br>
         <input type="password" name="password" placeholder="Password">
