@@ -33,17 +33,24 @@ include "ap_db_connect.php";
     <th>醫生</th>
     <th>刪除</th>
   </tr> 
-  <?php
+ 
+ <?php
     $query = "SELECT * FROM appointments";
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
-            echo "<td>" . $row['id'] . "</td>";
+          /*  //Change the fontsize using PHP, HTML and css through echo
+            echo '<> ' . $string.  ', <a href="something.php">New Page</a></span>';
+            //Change the font color using PHP, HTML and css through echo*/
+            echo "<br>";
+         /*   echo '<span style="color: red; font-size: 50px;"> ' . $string.  ', <a href="something.php">New Page</a></span>';
+           */ echo "<td span style=font-size: 50px;>" . $row['id'] . "</td>";
             echo "<td>" . $row['appointment_date'] . "</td>";
             echo "<td>" . $row['appointment_time'] . "</td>";
             echo "<td>" . $row['doctor_name'] . "</td>";
+          
             echo "<td><a href='delete.php?id=" . $row['id'] . "'>Delete</a></td>";
             echo "</tr>";
         }
@@ -51,6 +58,7 @@ include "ap_db_connect.php";
         echo "<tr><td colspan='5'>No appointment information yet</td></tr>";
     }
   ?>
+ 
 </table>
 <br>
 <br>
