@@ -32,30 +32,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Appointment</title>
+    <link rel="stylesheet" href="appointment.css">
 </head>
 <body>
-    <h1>Appointment</h1>
-
+<a href="Aboutme_login.php" class="de" >回主頁</a>
+   <a href="login_system\login\logout.php" class="de">登出</a>
+    <h2>Appointment</h2>
+<div class=three>
     <!-- 预约表单 -->
     <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
         <label for="first_name">First Name:</label>
         <input type="text" name="first_name" required><br>
-
+<br>
         <label for="last_name">Last Name:</label>
         <input type="text" name="last_name" required><br>
-
+<br>
         <label for="date_of_birth">Date of Birth:</label>
         <input type="date" name="date_of_birth" required><br>
-
+<br>
         <label for="identification_number">Identification Number:</label>
         <input type="text" name="identification_number" required><br>
-
+<br>
         <label for="phone_number">Phone Number:</label>
         <input type="text" name="phone_number" required><br>
-
+<br>
         <label for="appointment_date">Appointment Date:</label>
         <input type="date" name="appointment_date" required><br>
-
+<br>
         <label for="appointment_time">Appointment Time:</label>
             <select name="appointment_time" required>
             <option value="">Select Time</option>
@@ -63,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <option value="Afternoon">Afternoon</option>
             <option value="Evening">Evening</option>
             </select><br>
-
+<br>
         <label for="doctor_name">Doctor:</label>
         <select name="doctor_name" required>
             <option value="">Select Doctor</option>
@@ -71,8 +74,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <option value="Ellen">Ellen</option>
             <option value="John">John</option>
         </select><br>
-
-        <input type="submit" value="Submit">
-    </form>
+        </form>
+ <br>
+  <div class="de"><input type="submit" value="提交" >
+</div>        </div>
 </body>
 </html>
