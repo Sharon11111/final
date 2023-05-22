@@ -11,12 +11,12 @@ include "ap_db_connect.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
-    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="search11.css">
 </head>
 
 <body>
-    <button ><a href="Aboutme_login.php">回主頁</a></button>
-    <button ><a href="login_system\login\logout.php">登出</a></button>
+    <a href="Aboutme_login.php" class="de" >回主頁</a>
+   <a href="login_system\login\logout.php" class="de">登出</a>
 <form action="login.php" method="post">
        <h2>查詢預約</h2>
         <?php if (isset($_GET['error'])) {?>
@@ -54,7 +54,7 @@ include "ap_db_connect.php";
 </table>
 <br>
 <br>
-<button type="submit"><a href="delete_all.php">刪除</a></button>
+<a href="delete_all.php" class = "de">刪除全部</a>
 
 <br>
 <a href="appointment.php" class="ca">新增一筆預約</a>
