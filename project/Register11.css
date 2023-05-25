@@ -9,23 +9,27 @@ body{
 h2{
   min-width:500px;
   max-width: 1000px;
-  margin: 500px;
-  padding:30px 38px;
+  /*margin: 500px;*/
+  
+    margin-top: 0px;
+    margin-bottom: 20px;
   border: 5px solid rgba(23, 23, 22, 0.204);
+  padding:30px 0px;
+  border-top: 0px;
   text-align: center;
   background-color: rgba(170, 114, 169, 0.481);
   font-size: 20px;
   color:rgb(252, 240, 255);
-  margin-top:  1%;
-  margin-bottom: 0%;
+  /*margin-top:  1%;*/
+  
 }
-
 .three {
-  color:#9e7daea5;
-    text-align: center;
+    color:#9e7daea5;
+   display:nowrap;
     padding: 30px 38px 66px;
-    margin: 500px;
-    margin-top: 0px;
+    padding-top:0%;
+   margin: 400px;
+    margin-top: 50px;
     min-width:500px;   
     max-width: 1000px;
     height: auto;
@@ -33,12 +37,12 @@ h2{
     rgba(225, 205, 224, 0.84)),url("https://img.51miz.com/Element/00/81/16/73/6be3a32f_E811673_559bed6c.jpg") ;
     border: 5px solid rgba(48, 10, 43, 0.341);
     text-align: center;
-    background-size:auto;
+    /*background-size:auto;*/
     background-repeat : no-repeat;
    /* font-style: italic;*/
-    width:auto;
-  
-
+    /*width:auto;*/
+    position: relative;
+    left: 10%;
 }
 
 input{
@@ -74,16 +78,16 @@ button:hover{
   opacity: 0.8; 
 }
 .ca {
-	font-size: 16px;
-	display: inline-block;
-	padding: 10px;
-	color: rgba(58, 45, 67, 0.823);
+    font-size: 16px;
+    display: inline-block;
+    padding: 10px;
+    color: rgba(58, 45, 67, 0.823);
   font-weight: bold;
   text-decoration: underline;
   margin:auto;
 }
 .ca:hover {
-	text-decoration: none;
+    text-decoration: none;
     margin:auto;
 } 
 
@@ -96,15 +100,26 @@ button:hover{
     margin:20px auto;
     text-align: center;
 }
+
 .success{
+
   background:#F2DEDE;
   color:#40754C;
-  padding:10px;
-  width:95%;
-  border-radius:5px;
+  padding: 10px;
+  width: 95%;
+ /* margin:1000px;
+  margin-top: 0%;
+  margin-bottom: 0%;*/
   margin:20px auto;
-  text-align: center;
+  border-radius:5px;
+float: auto; 
+ text-align: center;
+ position: relative;
+left: 30%;
+
 }
+
+
 .de{
   /*  float: center;*/
     font-size: 15px;
