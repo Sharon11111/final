@@ -13,11 +13,11 @@
 <a href="Aboutme_login.php" class="de" >回主頁</a> 
 <form action="login.php" method="post">
       
-        <?php if (isset($_GET['error'])) {?>
+      <h2>登入</h2>
+<div class=three>
+  <?php if (isset($_GET['error'])) {?>
             <p class="error"><?php echo $_GET['error']; ?></p>
         <?php } ?>
-<div class=three>
-<h2>登入</h2>
         <label>身分證</label>
         <br>
         <input type="text" name="identification_number" placeholder="ID number">
