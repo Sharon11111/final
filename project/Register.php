@@ -4,57 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGN UP</title>
+    <title>註冊</title>
     <link rel="stylesheet" href="Register.css">
 </head>
 <body>
-    <form action="signup-check.php" method="post">
- 
-        <?php if (isset($_GET['error'])) {?>
-            <p class="error"><?php echo $_GET['error']; ?></p>    
-        <?php } ?>
+<a href="Aboutme.php" class="de" >回主頁</a>
+   
+<form action="signup-check.php" method="post">
 
-        <?php if (isset($_GET['success'])) {?>
-            <p class="success"><?php echo $_GET['success']; ?></p>    
-        <?php } ?>
+    <?php if (isset($_GET['error'])) {?>
+     <p class="error"><?php echo $_GET['error']; ?></p>    
+     <?php } ?>
+
+     <?php if (isset($_GET['success'])) {?>
+     <p class="success"><?php echo $_GET['success']; ?></p>    
+    <?php } ?>
 <div class =three>
+        <h2>註冊</h2>
+        <br>
         <label>名字</label>
         <br>
-        <?php if (isset($_GET['name'])) {?>
+        <?php if (isset($_GET['first_name'])) {?>
             <input  type="text" 
-                    name="name" 
-                    placeholder="Name" 
-                    value="<?php echo $_GET['name']; ?>"><br>  
+                    name="first_name" 
+                    placeholder="First Name" 
+                    value="<?php echo $_GET['first_name']; ?>"><br>  
         <?php } else{?>
             <input  type="text" 
-                    name="name" 
-                    placeholder="Name"><br>
+                    name="first_name" 
+                    placeholder="First Name"><br>
         <?php }?>
 
         <label>姓氏</label>
         <br>
-        <?php if (isset($_GET['uname'])) {?>
+        <?php if (isset($_GET['last_name'])) {?>
             <input  type="text" 
-                    name="uname" 
-                    placeholder="User Name" 
-                    value="<?php echo $_GET['uname']; ?>"><br>  
+                    name="last_name" 
+                    placeholder="Last Name" 
+                    value="<?php echo $_GET['last_name']; ?>"><br>  
         <?php } else{?>
             <input  type="text" 
-                    name="uname" 
-                    placeholder="User Name"><br>
+                    name="last_name" 
+                    placeholder="Last Name"><br>
         <?php }?>
         
         <label>身分證</label>
         <br>
-        <?php if (isset($_GET['uname'])) {?>
+        <?php if (isset($_GET['identification_number'])) {?>
             <input  type="text" 
-                    name="uname" 
-                    placeholder="User Name" 
-                    value="<?php echo $_GET['uname']; ?>"><br>  
+                    name="identification_number" 
+                    placeholder="ID Number" 
+                    value="<?php echo $_GET['identification_number']; ?>"><br>  
         <?php } else{?>
             <input  type="text" 
-                    name="uname" 
-                    placeholder="User Name"><br>
+                    name="identification_number" 
+                    placeholder="ID Number"><br>
+        <?php }?>
+
+        <label>信箱</label>
+        <br>
+        <?php if (isset($_GET['email'])) {?>
+            <input  type="text" 
+                    name="email" 
+                    placeholder="Email" 
+                    value="<?php echo $_GET['email']; ?>"><br>  
+        <?php } else{?>
+            <input  type="text" 
+                    name="email" 
+                    placeholder="Email"><br>
         <?php }?>
         
         <label>密碼</label>
