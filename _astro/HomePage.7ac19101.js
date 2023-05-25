@@ -1,0 +1,1 @@
+import{d as s,D as a}from"./Doctors.6aea2cc4.js";import{j as e,L as c,F as r}from"./Layout.a5883026.js";import{r as i}from"./index.37e2c5d5.js";function l(){return e.jsx(c,{children:e.jsx(r,{justify:"center",pb:200,children:e.jsx(r,{direction:"column",gap:"lg",w:400,children:Object.values(s).map((t,o)=>i.createElement(a,{...t,key:o}))})})})}export{l as HomePage};
