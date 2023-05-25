@@ -94,11 +94,17 @@ button:hover{
 .error{
   background:#F2DEDE;
     color:#A94442;
-    padding:10px;
-    width:95%;
-    border-radius:5px;
-    margin:20px auto;
-    text-align: center;
+     padding: 10px;
+  width: 95%;
+ /* margin:1000px;
+  margin-top: 0%;
+  margin-bottom: 0%;*/
+  margin:20px auto;
+  border-radius:5px;
+float: auto; 
+ text-align: center;
+ position: relative;
+left: 30%;
 }
 
 .success{
