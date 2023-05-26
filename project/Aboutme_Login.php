@@ -1,7 +1,3 @@
-<!-- <?php 
-session_start();
-if (isset($_SESSION['identification_number']) && isset($_SESSION['password'])) {
-?> -->
 
 <!DOCTYPE html>
 <html>
@@ -62,9 +58,3 @@ if (isset($_SESSION['identification_number']) && isset($_SESSION['password'])) {
 
 </body>
 </html>
-<!-- <?php 
-}else{
-     header("Location: index.php");
-     exit();
-}
- ?> -->
