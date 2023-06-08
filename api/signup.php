@@ -1,8 +1,10 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Read the incoming data from the request body, using JSON format
+    // Read the incoming data from the request body
     $data = file_get_contents('php://input');
+
+    // Assuming the incoming data is in JSON format
     $jsonData = json_decode($data, true);
 
     // Process the data as needed
@@ -14,16 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // TODO: store data to db
 
+    // check account already exists
+    $error_duplicate_account = false;
 
-
-
-
-    // Prepare the response
     $response = [
         'status' => 'success',
-        // if sign up fail
-        // 'status' => 'fail',
     ];
+
 
     // Send the response back to the client
     header('Content-Type: application/json');

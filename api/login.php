@@ -9,19 +9,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Process the data as needed
     // For example, you can access specific values using array notation:
-    $userId = $jsonData['userId'];
+    $identification_number = $jsonData['identification_number'];
     $password = $jsonData['password'];
 
-    // TODO: Store data to db
+    // TODO: check password, and get user data from db
 
-    
+    $first_name = "TODO";
+    $last_name = "TODO";
+        
 
-    
+
+
     // Prepare the response
     $response = [
         'status' => 'success',
         // if login fail 
         // 'status' => 'fail',
+        'first_name' => $first_name,
+        'last_name' => $last_name,
     ];
 
     // Send the response back to the client
