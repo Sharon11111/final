@@ -7,7 +7,7 @@ body{
 }
 
 
-h2{
+  h2{
     min-width:500px;
     max-width: 1000px;
     margin: 500px;
@@ -83,7 +83,7 @@ button{
 button:hover{
     opacity: 0.8; 
 }
-.error{
+ .error{
     background:#F2DEDE;
     color:#A94442;
     padding:10px;
@@ -101,7 +101,7 @@ button:hover{
   margin:20px auto;
   text-align: center;
 }
-
+  
 /*
 h1{
     float:right;
@@ -138,3 +138,21 @@ h1{
 .ca:hover {
 	text-decoration: none;
 } 
+.de{
+    /*float: auto;*/
+    font-size: 15px;
+    display: inline-block;
+    background:rgba(49, 35, 54, 0.557);
+    color: aliceblue;
+    text-decoration: none;
+    border-radius: 5px;
+    padding:8px 12px;
+    margin-right: 10px;
+    border:none;
+    margin:auto;
+   
+}
+
+.de:hover{
+    opacity: 0.8; 
+}

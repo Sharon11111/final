@@ -1,27 +1,28 @@
 
 
 body{
-  background:linear-gradient(to top, rgba(46, 3, 43, 0.811), 
-  rgba(225, 205, 224, 0.84));
-  min-width:500px;   
-  max-width: 1000px;
-}
-h2{
-  min-width:500px;
-  max-width: 1000px;
-  margin: 500px;
-  padding:30px 38px;
-  border: 5px solid rgba(23, 23, 22, 0.204);
-  text-align: center;
-  background-color: rgba(170, 114, 169, 0.481);
-  font-size: 20px;
-  color:rgb(252, 240, 255);
-  margin-top:  1%;
-  margin-bottom: 0%;
+    background:linear-gradient(to top, rgba(46, 3, 43, 0.811), 
+    rgba(225, 205, 224, 0.84));
+    min-width:500px;   
+    max-width: 1000px;
+  }
+  h2{
+    min-width:500px;
+    max-width: 1000px;
+    margin: 500px;
+    padding:30px 38px;
+    border: 5px solid rgba(23, 23, 22, 0.204);
+    text-align: center;
+    background-color: rgba(170, 114, 169, 0.481);
+    font-size: 20px;
+    color:rgb(252, 240, 255);
+    margin-top:  3%;
+    margin-bottom: 0%;
+    margin-top: 80px;
 }
 
 .three {
-  color:#9e7daea5;
+    color:#9e7daea5;
     text-align: center;
     padding: 30px 38px 66px;
     margin: 500px;
@@ -37,58 +38,56 @@ h2{
     background-repeat : no-repeat;
    /* font-style: italic;*/
     width:auto;
+}
   
-
-}
-
-input{
-  margin-bottom: 20px;
-    position: relative;
-    font-size: 16px;
-    height: auto;
-    padding: 10px;
-    caret-color: #9e7dae; /* 指定色 */
-    outline:transparent; /* 外框效果 */
-    border-color:transparent;
-    border-bottom-color: rgba(48, 29, 51, 0.769);
-
-}
-label{
-  color:rgba(49, 35, 54, 0.557);
-  font-size: 18px;
-  padding:10px;
-  font-weight: bold;
-
-}
-button{
-  float: auto;
-    color:aliceblue;
-    font-size: 15px;
-    background-color:rgba(49, 35, 54, 0.557);
-    border-radius: 5px;
-    padding:8px 12px;
-    margin-right: 10px;
-    border:none;
-}
-button:hover{
-  opacity: 0.8; 
-}
-.ca {
-	font-size: 16px;
-	display: inline-block;
-	padding: 10px;
-	color: rgba(58, 45, 67, 0.823);
-  font-weight: bold;
-  text-decoration: underline;
-  margin:auto;
-}
-.ca:hover {
-	text-decoration: none;
+  input{
+    margin-bottom: 20px;
+      position: relative;
+      font-size: 16px;
+      height: auto;
+      padding: 10px;
+      caret-color: #9e7dae; /* 指定色 */
+      outline:transparent; /* 外框效果 */
+      border-color:transparent;
+      border-bottom-color: rgba(48, 29, 51, 0.769);
+  
+  }
+  label{
+    color:rgba(49, 35, 54, 0.557);
+    font-size: 18px;
+    padding:10px;
+    font-weight: bold;
+  
+  }
+  button{
+    float: auto;
+      color:aliceblue;
+      font-size: 15px;
+      background-color:rgba(49, 35, 54, 0.557);
+      border-radius: 5px;
+      padding:8px 12px;
+      margin-right: 10px;
+      border:none;
+  }
+  button:hover{
+    opacity: 0.8; 
+  }
+  .ca {
+      font-size: 16px;
+      display: inline-block;
+      padding: 10px;
+      color: rgba(58, 45, 67, 0.823);
+    font-weight: bold;
+    text-decoration: underline;
     margin:auto;
-} 
-
-.error{
-  background:#F2DEDE;
+  }
+  .ca:hover {
+      text-decoration: none;
+      margin:auto;
+  } 
+  
+  .error{
+    background:#F2DEDE;
     color:#A94442;
     padding:10px;
     width:95%;
@@ -105,23 +104,26 @@ button:hover{
   margin:20px auto;
   text-align: center;
 }
-.de{
-  /*  float: center;*/
-    font-size: 15px;
   
-    background:rgba(49, 35, 54, 0.557);
-    color: aliceblue;
-    text-decoration: none;
-    border-radius: 5px;
-    padding:8px 12px;
-    margin-right: 10px;
-    border:none;
-    margin:10px;
-    text-align:center;
-    margin:auto;  
-    display: inline-block;
-    font-weight: bold;
-}
-.de:hover{
-    opacity: 0.8; 
-} 
+  
+  .de{
+    /*  float: center;*/
+      font-size: 15px;
+    
+      background:rgba(49, 35, 54, 0.557);
+      color: aliceblue;
+      text-decoration: none;
+      border-radius: 5px;
+      padding:8px 12px;
+      margin-right: 10px;
+      border:none;
+      margin:10px;
+      text-align:center;
+      margin:auto;  
+      display: inline-block;
+      font-weight: bold;
+  }
+  .de:hover{
+      opacity: 0.8; 
+  } 
+  

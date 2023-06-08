@@ -2,7 +2,7 @@
 session_start(); 
 include "db_connect.php";
 
-if (isset($_POST['uname']) && isset($_POST['password'])) {
+if (isset($_POST['identification_number']) && isset($_POST['password'])) {
 
 	function validate($data){
        $data = trim($data);
@@ -11,37 +11,37 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 	   return $data;
 	}
 
-	$uname = validate($_POST['uname']);
+	$identification_number = validate($_POST['identification_number']);
 	$pass = validate($_POST['password']);
 
-	if (empty($uname)) {
-		header("Location: index.php?error=User Name is required");
+	if (empty($identification_number)) {
+		header("Location: index.php?error=ID number is required");
 	    exit();
 	}else if(empty($pass)){
         header("Location: index.php?error=Password is required");
 	    exit();
 	}else{
 		// hashing the password
-		$pass = md5($pass);
-		$sql = "SELECT * FROM neeka WHERE user_name='$uname' AND password='$pass'";
+		// $pass = md5($pass);
+		$sql = "SELECT * FROM member WHERE identification_number='$identification_number' AND password='$pass'";
 
 		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) === 1) {
 			$row = mysqli_fetch_assoc($result);
-            if ($row['user_name'] === $uname && $row['password'] === $pass) {
-            	$_SESSION['user_name'] = $row['user_name'];
-            	$_SESSION['name'] = $row['name'];
-            	$_SESSION['id'] = $row['id'];
-            	header("Location:../../Aboutme_Login.php");
+            if ($row['identification_number'] === $identification_number && $row['password'] === $pass) {
+            	$_SESSION['identification_number'] = $row['identification_number'];
+            	$_SESSION['first_name'] = $row['first_name'];
+            	$_SESSION['last_name'] = $row['last_name'];
+            	header("Location:/Aboutme_Login11.php");
 		        exit();
             }else{
 			
-				header("Location: index.php?error=Incorect User name or password");
+				header("Location: index.php?error=Incorect ID number or password");
 		        exit();
 			}
 		}else{
-			header("Location: index.php?error=Incorect User name or password");
+			header("Location: index.php?error=Incorect ID number or password");
 		        exit();
 		}
 	}
