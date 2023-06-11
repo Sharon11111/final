@@ -51,9 +51,9 @@ if ($conn->query($sql) === TRUE) {
 }
 // CREATE TABLE $table_appointments
 $sql = "CREATE TABLE $table_appointments (
-    identification_number VARCHAR(255),
-    appointment_date VARCHAR(255),
-    appointment_time VARCHAR(255),
+    identification_number VARCHAR(30),
+    appointment_date VARCHAR(30),
+    appointment_time VARCHAR(30),
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
     date_of_birth VARCHAR(255),
