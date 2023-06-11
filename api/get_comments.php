@@ -1,6 +1,9 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+include (realpath(dirname(__FILE__)."/init/connect_db.php"));
+
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Read the incoming data from the request body
     $data = file_get_contents('php://input');
 
@@ -9,18 +12,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Process the data as needed
     // For example, you can access specific values using array notation:
-    $doctor_id = $jsonData['doctor_id'];
+    // $doctor_name = $jsonData['doctor_name'];
+    $doctor_name = 'name';
 
-    // TODO: get comments by doctor_id from db
+    // SQL
+    $sql = "SELECT * FROM $table_comments 
+            WHERE doctor_name = '$doctor_name'";
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+        $rows = array();
+        while($r = mysqli_fetch_assoc($result)) {
+            $rows[] = $r;
+        }
+        $response = [
+            'status' => 'success',
+            'comments' => $rows
+        ];
+    } else {
+        $errorMessage = mysqli_error($conn);
+        $response = [
+            'status' => 'fail',
+            'message' => $errorMessage
+        ];
+    }
 
-
-
-
-
-    // Prepare the response
-    $response = [
-        // TODO: return comments by doctor
-    ];
 
     // Send the response back to the client
     header('Content-Type: application/json');
