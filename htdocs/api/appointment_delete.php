@@ -2,8 +2,9 @@
 
 include (realpath(dirname(__FILE__)."/init/connect_db.php"));
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+// if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
     // Read the incoming data from the request body
     $data = file_get_contents('php://input');
 
@@ -12,21 +13,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     // Process the data as needed
     // For example, you can access specific values using array notation:
-    // $doctor_name = $jsonData['doctor_name'];
-    $doctor_name = 'name';
+    $identification_number = $jsonData["identification_number"];
+    $appointment_date = $jsonData["appointment_date"];
+    $appointment_time = $jsonData["appointment_time"];
+    // $identification_number = "A123";
+    // $appointment_date = "temp02";
+    // $appointment_time = "temp";
 
     // SQL
-    $sql = "SELECT * FROM $table_comments 
-            WHERE doctor_name = '$doctor_name'";
+    $sql = "DELETE FROM $table_appointments 
+    WHERE identification_number = '$identification_number'
+    AND appointment_date = '$appointment_date'
+    AND appointment_time = '$appointment_time'
+    ";
+
     $result = mysqli_query($conn, $sql);
     if ($result) {
-        $rows = array();
-        while($r = mysqli_fetch_assoc($result)) {
-            $rows[] = $r;
-        }
         $response = [
             'status' => 'success',
-            'comments' => $rows
         ];
     } else {
         $errorMessage = mysqli_error($conn);
@@ -35,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             'message' => $errorMessage
         ];
     }
+
 
 
     // Send the response back to the client

@@ -59,8 +59,7 @@ $sql = "CREATE TABLE $table_appointments (
     date_of_birth VARCHAR(255),
     phone_number VARCHAR(255),
     doctor_name VARCHAR(255),
-    PRIMARY KEY (identification_number, appointment_date, appointment_time),
-    FOREIGN KEY (identification_number) REFERENCES $table_users(identification_number)
+    PRIMARY KEY (first_name, last_name, appointment_date, appointment_time)
 )";
 if ($conn->query($sql) === TRUE) {
     echo "Table created successfully: TABLE_NAME == $table_appointments<br>\n";
@@ -73,6 +72,7 @@ $sql = "CREATE TABLE $table_comments (
     identification_number VARCHAR(255),
     doctor_name VARCHAR(255),
     body VARCHAR(2000),
+    created_at VARCHAR(255),
     FOREIGN KEY (identification_number) REFERENCES $table_users(identification_number)
 )";
 if ($conn->query($sql) === TRUE) {

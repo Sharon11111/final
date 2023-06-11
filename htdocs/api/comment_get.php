@@ -2,8 +2,8 @@
 
 include (realpath(dirname(__FILE__)."/init/connect_db.php"));
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+// if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Read the incoming data from the request body
     $data = file_get_contents('php://input');
 
@@ -12,21 +12,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     // Process the data as needed
     // For example, you can access specific values using array notation:
-    $identification_number = "A123";
-    $password = "dddd";
-    
-    $sql = "SELECT * FROM $table_users 
-            WHERE identification_number = '$identification_number'
-            AND password = '$password'
-            ";
-    $result = mysqli_query($conn, $sql);
+    $doctor_name = $jsonData['doctor_name'];
+    // $doctor_name = 'name';
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
+    // SQL
+    $sql = "SELECT * FROM $table_comments 
+            WHERE doctor_name = '$doctor_name'";
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+        $rows = array();
+        while($r = mysqli_fetch_assoc($result)) {
+            $rows[] = $r;
+        }
         $response = [
             'status' => 'success',
-            'first_name' => $row['first_name'],
-            'last_name' => $row['last_name'],
+            'comments' => $rows
         ];
     } else {
         $errorMessage = mysqli_error($conn);
@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             'message' => $errorMessage
         ];
     }
+
 
     // Send the response back to the client
     header('Content-Type: application/json');

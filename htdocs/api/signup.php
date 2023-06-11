@@ -2,23 +2,23 @@
 
 include (realpath(dirname(__FILE__)."/init/connect_db.php"));
 
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // Read the incoming data from the request body, using JSON format
     $data = file_get_contents('php://input');
     $jsonData = json_decode($data, true);
 
     // Process the data as needed
     // For example, you can access specific values using array notation:
-    // $first_name = $jsonData["first_name"];
-    // $last_name = $jsonData["last_name"];
-    // $identification_number = $jsonData["identification_number"];
-    // $password = $jsonData['password'];
+    $first_name = $jsonData["first_name"];
+    $last_name = $jsonData["last_name"];
+    $identification_number = $jsonData["identification_number"];
+    $password = $jsonData['password'];
 
-    $first_name = "王";
-    $last_name = "嗨嗨c9 c9 c9 ";
-    $identification_number = "A123";
-    $password = "dddd";
+    // $first_name = "王";
+    // $last_name = "嗨嗨c9 c9 c9 ";
+    // $identification_number = "A123";
+    // $password = "dddd";
 
     // SQL query to insert a new row
     $sql = "INSERT INTO $table_users (
@@ -40,9 +40,6 @@ include (realpath(dirname(__FILE__)."/init/connect_db.php"));
         password='$password'
     ";
     $result = mysqli_query($conn, $sql);
-
-    // check account already exists
-    // $error_duplicate_account = false;
     if ($result) {
         $response = [
             'status' => 'success',

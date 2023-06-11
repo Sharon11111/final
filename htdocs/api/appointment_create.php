@@ -2,31 +2,31 @@
 
 include (realpath(dirname(__FILE__)."/init/connect_db.php"));
 
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // Read the incoming data from the request body
     $data = file_get_contents('php://input');
     // Assuming the incoming data is in JSON format
     $jsonData = json_decode($data, true);
     // Process the data as needed
     // For example, you can access specific values using array notation:
-    // $first_name = $_POST["first_name"];
-    // $last_name = $_POST["last_name"];
-    // $identification_number = $_POST["identification_number"];
-    // $date_of_birth = $_POST["date_of_birth"];
-    // $phone_number = $_POST["phone_number"];
-    // $appointment_date = $_POST["appointment_date"];
-    // $appointment_time = $_POST["appointment_time"];
-    // $doctor_name = $_POST["doctor_name"];
+    $first_name = $jsonData["first_name"];
+    $last_name = $jsonData["last_name"];
+    $date_of_birth = $jsonData["date_of_birth"];
+    $identification_number = $jsonData["identification_number"];
+    $phone_number = $jsonData["phone_number"];
+    $appointment_date = $jsonData["appointment_date"];
+    $appointment_time = $jsonData["appointment_time"];
+    $doctor_name = $jsonData["doctor_name"];
 
-    $first_name ="nnnn";
-    $last_name ="temp";
-    $identification_number ="A123";
-    $date_of_birth ="temp";
-    $phone_number ="temp";
-    $appointment_date ="temp02";
-    $appointment_time ="temp";
-    $doctor_name ="temp";
+    // $first_name ="nnnn";
+    // $last_name ="temp";
+    // $identification_number ="A123";
+    // $date_of_birth ="temp";
+    // $phone_number ="temp";
+    // $appointment_date ="temp02";
+    // $appointment_time ="temp";
+    // $doctor_name ="temp";
 
     // TODO: Perform any necessary operations with the data
 
